@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;//Подключаем библиотеку менеджера сцен
+using UnityEngine.SceneManagement; //Подключаем библиотеку менеджера сцен
 
 public class CanvasButtons : MonoBehaviour
 {

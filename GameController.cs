@@ -8,7 +8,7 @@ using System.Collections.Generic;
 public class GameController : MonoBehaviour
 {
     private CubePos nowCube = new CubePos(0, 1, 0); // Значения для начального куба
-    public float CubeChangePlaceSpeed = 0.5f; //Значения скорости смены позиции куба
+    public float CubeChangePlaceSpeed = 0.5f;      //Значения скорости смены позиции куба
     public Transform cubeToPlace;
     public GameObject cubeToCreate, allCubes;
     public Text scoreRecord;
