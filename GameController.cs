@@ -40,10 +40,10 @@ public class GameController : MonoBehaviour
     {
         scoreRecord.text = "<size=90><color=#2D7DF4>РЕКОРД:</color></size>" + PlayerPrefs.GetInt("score") + "\n <size=80> СЧЁТ:</size> 0";
         toCameraColor = Camera.main.backgroundColor;
-        mainCam = Camera.main.transform; //Берется трансформ камеры
-        camMoveToYposition = 8f + nowCube.y - 1f; //Добавляем позицию последнего поставленного куба по Y
+        mainCam = Camera.main.transform;                   //Берется трансформ камеры
+        camMoveToYposition = 8f + nowCube.y - 1f;         //Добавляем позицию последнего поставленного куба по Y
         allCubesRB = allCubes.GetComponent<Rigidbody>(); //Берем компонент
-        showCubePlace = StartCoroutine(ShowCubePlace()); //Запуск куратино
+        showCubePlace = StartCoroutine(ShowCubePlace());//Запуск куратино
     }
     private void Update()
     {
@@ -53,17 +53,17 @@ public class GameController : MonoBehaviour
             && !EventSystem.current.IsPointerOverGameObject()) //Если задет UI, то выходим из функции 
         {
 #if !UNITY_EDITOR
-            if (Input.GetTouch(0).phase != TouchPhase.Began) //Если фаза не равна началу касания
+            if (Input.GetTouch(0).phase != TouchPhase.Began)       //Если фаза не равна началу касания
             {
-                return; //выходим из функции
+                return;                                          //Выходим из функции
             }
 #endif
-            if (!firstCube) //Если касание было не экран
+            if (!firstCube)                                   //Если касание было не экран
             {
                 firstCube = true;
-                foreach (GameObject obj in canvasStartPage) //То перебираем все объекты в массиве
+                foreach (GameObject obj in canvasStartPage)//То перебираем все объекты в массиве
                 {
-                    Destroy(obj);                         //Уничтожаем все объекты UI
+                    Destroy(obj);                        //Уничтожаем все объекты UI
                 }
             }
 
