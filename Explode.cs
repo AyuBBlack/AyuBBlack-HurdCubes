@@ -16,9 +16,9 @@ public class Explode : MonoBehaviour
                 child.gameObject.GetComponent<Rigidbody>().AddExplosionForce(70f, Vector3.up, 5f); //Добавляем взрывную силу
                 child.SetParent (null);                              // Убираем родителя для каждого объекта
             }
-            restartButton.SetActive(true);                         //Делаем кнопку рестарт активной
+            restartButton.SetActive(true);                                             //Делаем кнопку рестарт активной
             Camera.main.transform.position -= new Vector3(0, 0, 3f) * Time.deltaTime; //Отдаляем камеру
-            Destroy(collision.gameObject);                       //Удаляем all cubes
+            Destroy(collision.gameObject);                                           //Удаляем all cubes
             _collisionSet = true;
         }
     }
