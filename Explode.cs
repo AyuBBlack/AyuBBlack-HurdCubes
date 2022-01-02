@@ -18,7 +18,7 @@ public class Explode : MonoBehaviour
             }
             restartButton.SetActive(true);                                             //Делаем кнопку рестарт активной
             Camera.main.transform.position -= new Vector3(0, 0, 3f) * Time.deltaTime; //Отдаляем камеру
-            Destroy(collision.gameObject);                                           //Удаляем all cubes
+            Destroy(collision.gameObject);                                           //Удаляем All cubes
             _collisionSet = true;
         }
     }
